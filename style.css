@@ -1,0 +1,183 @@
+
+/* General styling */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    line-height: 1.7;
+}
+
+/* Hero section */
+.hero {
+    min-height: 250px;
+    padding: 45px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #1e3a8a, #7c3aed);
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+.hero-button,
+.card-button {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-top: 10px;
+    color: white;
+    background-color: #2563eb;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+/* Sticky navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 15px;
+    background-color: #0f172a;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #93c5fd;
+}
+
+/* Main sections */
+.content-section {
+    max-width: 1000px;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 45px 25px;
+    scroll-margin-top: 65px;
+}
+
+.content-section h2 {
+    color: #1e3a8a;
+    font-size: 28px;
+}
+
+.alternate {
+    max-width: none;
+    background-color: #e0e7ff;
+}
+
+/* Relative parent for absolute badge */
+.feature-card {
+    position: relative;
+    max-width: 600px;
+    margin: 35px auto 10px;
+    padding: 35px 25px 25px;
+    border: 2px solid #c4b5fd;
+    border-radius: 14px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Absolute badge */
+.badge {
+    position: absolute;
+    top: -14px;
+    right: 18px;
+    z-index: 2;
+    padding: 5px 14px;
+    color: white;
+    background-color: #dc2626;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.feature-card h3 {
+    color: #6d28d9;
+}
+
+/* Service cards */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #c7d2fe;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.service-card h3 {
+    color: #4338ca;
+}
+
+/* Contact section */
+.contact-section {
+    background-color: #f1f5f9;
+}
+
+/* Fixed floating help button */
+.floating-help {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 2000;
+    padding: 14px 20px;
+    color: white;
+    background-color: #16a34a;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.floating-help:hover {
+    background-color: #15803d;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #0f172a;
+}
+
+/* Responsive layout */
+@media (max-width: 650px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-help {
+        right: 15px;
+        bottom: 15px;
+    }
+}
